@@ -21,6 +21,14 @@ robot_simulation/
 ```
 
 ---
+## 🛠 Requirements
+
+* **Git LFS**
+* **Docker**
+* **Docker Compose**
+* (Optional) [`just`](https://github.com/casey/just) for helper commands
+
+---
 
 ## 🚀 Getting Started
 
@@ -30,12 +38,14 @@ Since this repo uses **Git submodules**, make sure you clone it with:
 
 ```bash
 git clone --recurse-submodules https://github.com/EIC-Robocup-2026/simulation.git
+git lfs pull
 ```
 
 If you already cloned without submodules:
 
 ```bash
 git submodule update --init --recursive
+git lfs pull
 ```
 
 ---
@@ -54,6 +64,11 @@ sudo docker build -t "eic-robocup2026-development:latest" -f Dockerfile.simulati
 **Run the simulation:**
 
 ```bash
+# Allow the Docker container to connect to the X server.
+# This command only needs to be run once after a system boot.
+xhost local:root
+
+# Run the simulation
 sudo docker compose -f compose.simulation.yml up
 ```
 
@@ -79,14 +94,6 @@ just run-topic-list   # List ROS2 Topics
 | `robot_control`     | ROS 2 packages for robot motion control (e.g., omni wheel drive controller) |
 | `robot_description` | URDF models, meshes, and RViz/Gazebo configs                                |
 | `robot_gazebo`      | Gazebo simulation environment, worlds, and launch files                     |
-
----
-
-## 🛠 Requirements
-
-* **Docker**
-* **Docker Compose**
-* (Optional) [`just`](https://github.com/casey/just) for helper commands
 
 ---
 
