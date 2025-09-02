@@ -49,6 +49,20 @@ git lfs pull
 ```
 
 ---
+### Build & Run on your computer
+
+```bash
+# cd ros2_ws and clone this repo to src directory
+
+# Install nesscessary package
+rosdep install --from-paths src
+
+# Build and run simulation
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch robot_simulation gzsim_omnibot.launch.py
+```
+
 
 ### Build & Run in Docker
 
