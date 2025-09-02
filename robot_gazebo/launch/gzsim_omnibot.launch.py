@@ -39,7 +39,7 @@ def generate_launch_description():
     gz_verbose = LaunchConfiguration('verbose', default='false')
     world_file = LaunchConfiguration('world', default=default_world)
     robot_model = LaunchConfiguration('robot_model', default=default_robot)
-    use_ros2_control = LaunchConfiguration('use_ros2_control', default='true')
+    ros2_control = LaunchConfiguration('ros2_control', default='gazebo')
     rviz_config_file = LaunchConfiguration('rviz_config_file')
     use_rviz = LaunchConfiguration('use_rviz')
 
@@ -113,7 +113,7 @@ def generate_launch_description():
         launch_arguments={
             'use_sim_time': use_sim_time,
             'robot_model': robot_model,
-            'use_ros2_control': use_ros2_control,
+            'ros2_control': ros2_control,
         }.items()
     )
     
