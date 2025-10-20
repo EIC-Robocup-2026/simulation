@@ -32,6 +32,14 @@ robot_simulation/
 
 ## 🚀 Getting Started
 
+### Initialize git LFS
+
+Install **git LFS**:
+
+```bash
+git lfs install
+```
+
 ### Clone with Submodules
 
 Since this repo uses **Git submodules**, make sure you clone it with:
