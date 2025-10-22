@@ -23,7 +23,7 @@ def generate_launch_description():
     default_world = os.path.join(
         get_package_share_directory(package_name),
         'worlds',
-        'turtlebot3_world_gz.world'
+        'aws_small_house.world'
     )
 
     default_robot = os.path.join(
