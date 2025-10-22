@@ -32,13 +32,9 @@ robot_simulation/
 
 ## 🚀 Getting Started
 
-### Initialize git LFS
+### Install and Initialize git LFS
 
-Install **git LFS**:
-
-```bash
-git lfs install
-```
+[Install **git LFS**](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)
 
 ### Clone with Submodules
 
